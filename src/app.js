@@ -49,3 +49,6 @@ var selectedKey = createKey();
 
 getLocalStorageList();
 
+// $('.about').on('click',function(){
+// 	$('#aboutModal').modal();
+// })
