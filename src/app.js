@@ -20,17 +20,7 @@ function autoLoad(event){
 	 setHtmlCode( window.localStorage.getItem(selectedKey) );
 }
 
-function getLocalStorageList(){
 
-	var list = [];
-	list.push('<option>'+ selectedKey +'</option>');
-
-	for (var key in localStorage){
-	   // console.log(key)
-	   list.push( '<option>'+ key +'</option>');
-	}
-	$('#listSelect').append( list.join("") );
-}
 
 function loadLocalStorage(event){
 
@@ -47,7 +37,6 @@ initHtmlEditor();
 
 var selectedKey = createKey();
 
-getLocalStorageList();
 
 // $('.about').on('click',function(){
 // 	$('#aboutModal').modal();
