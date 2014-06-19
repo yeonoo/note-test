@@ -1,6 +1,9 @@
 var $contents = $('#contents');
 
-function getHtmlCode(){$contents.code(  );}
+function getHtmlCode(){
+	$contents.code(  );
+
+}
 function setHtmlCode(code){
 	$contents.code( code );
 }
