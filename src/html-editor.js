@@ -1,8 +1,7 @@
 var $contents = $('#contents');
 
 function getHtmlCode(){
-	$contents.code(  );
-
+	return $contents.code();
 }
 function setHtmlCode(code){
 	$contents.code( code );
