@@ -11,7 +11,7 @@ function autoSave(event){
 	window.localStorage.setItem(selectedKey, getHtmlCode());
 }
 function autoLoad(event){
-	 setHtmlCode( window.localStorage.getItem(selectedKey) );
+	setHtmlCode( window.localStorage.getItem(selectedKey) );
 }
 
 
