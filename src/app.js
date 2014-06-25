@@ -24,6 +24,12 @@ function createNew(event){
 	setHtmlCode( window.localStorage.getItem('note-contents'));
 }
 
+function fullScree() {
+	if (screenfull.enabled) {
+		screenfull.request();
+	}
+}
+
 function saveLocalStorage(contents) {
 	var content = contents.code();
 	var oMyBlob = new Blob([content], { type : "text/plain", endings: "transparent"});

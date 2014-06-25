@@ -29,16 +29,16 @@ $('#fullscreen').click(function () {
     };
 });
 */
-$(function() {
-	$('#fullScreen').click(function() {
-		$(document).fullScreen(true);
-	})
+$('#fullScreen').click(function() {
+	if (screenfull.enabled) {
+		screenfull.toggle();
+	}
+})
 
-	$('#createNew').click(function() {
-		createNew();
-	});
+$('#createNew').click(function() {
+	createNew();
+});
 
-	$('#saveFile').click(function() {
-		saveLocalStorage($('#contents'));
-	});
+$('#saveFile').click(function() {
+	saveLocalStorage($('#contents'));
 });
