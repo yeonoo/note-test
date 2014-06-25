@@ -1,7 +1,7 @@
-(function() {
+
 
 	var $contents = $('#contents');
-	
+
 	function createNew(event){	
 		window.localStorage.setItem('note_contents', " ");
 		setHtmlCode( window.localStorage.getItem('note-contents'));
@@ -12,6 +12,7 @@
 			screenfull.request();
 		}	
 	}
+
 	function saveLocalStorage(contents) {
 		var content = contents.code();
 		var oMyBlob = new Blob([content], { type : "text/plain", endings: "transparent"});
@@ -21,4 +22,3 @@
 	$('#createNew').on('click', createNew);
 	$('#fullScreen').on('click', fullScreen);
 	$('#saveFile').on('click', saveLoacalStorage);
-})
