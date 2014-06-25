@@ -30,15 +30,9 @@ $('#fullscreen').click(function () {
 });
 */
 $(function() {
-	$(document).ready(function(){
-        $("#fullScreen").toggle(
-            function(){
-                fullscreen();
-            },
-            function(){
-            }
-        );
-    });
+	$('#fullScreen').click(function() {
+		$(document).fullScreen(true);
+	})
 
 	$('#createNew').click(function() {
 		createNew();
