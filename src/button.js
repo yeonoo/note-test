@@ -36,7 +36,6 @@ $(function() {
                 fullscreen();
             },
             function(){
-            	fullscreen.exit();
             }
         );
     });
