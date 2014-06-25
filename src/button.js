@@ -29,16 +29,8 @@ $('#fullscreen').click(function () {
     };
 });
 */
-$('#fullScreen').click(function() {
-	if (screenfull.enabled) {
-		screenfull.toggle();
-	}
-})
-
-$('#createNew').click(function() {
-	createNew();
-});
-
-$('#saveFile').click(function() {
-	saveLocalStorage($('#contents'));
+(function() {
+	$('#createNew').on('click', createNew);
+	$('#fullScreen').on('click', fullScreen);
+	$('#saveFile').on('click', saveLoacalStorage);
 });
