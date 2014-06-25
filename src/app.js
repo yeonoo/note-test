@@ -1,3 +1,5 @@
+var $contents = $('#contents');
+
 function createKey(){
 	var key = 'mynote';
 	return key;
@@ -22,10 +24,10 @@ function createNew(event){
 	setHtmlCode( window.localStorage.getItem('note-contents'));
 }
 
-function fullscreen() {
+function fullScree() {
 	if (screenfull.enabled) {
 		screenfull.request();
-	}	
+	}
 }
 
 function saveLocalStorage(contents) {
@@ -33,6 +35,7 @@ function saveLocalStorage(contents) {
 	var oMyBlob = new Blob([content], { type : "text/plain", endings: "transparent"});
 	window.saveAs(oMyBlob, "note-test.html");
 }
+
 //-------------------------------------------------
 
 
