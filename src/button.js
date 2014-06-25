@@ -1,43 +1,21 @@
-/*
-var bb = new BlobBuilder();
-bb.append(content);
-var fileSaver = window.saveAs(bb.getBlob("text/plain;charset=UTF-8"), "filename.txt");
-*/
-/*
-function fullScreen() {
-	var el = document.documentElement
-   		, rfs = // for newer Webkit and Firefox
-           el.requestFullScreen
-        || el.webkitRequestFullScreen
-        || el.mozRequestFullScreen
-        || el.msRequestFullScreen
-	;
-	if(typeof rfs!="undefined" && rfs){
-  	rfs.call(el);
-	} else if(typeof window.ActiveXObject!="undefined"){
-  	// for Internet Explorer
-  		var wscript = new ActiveXObject("WScript.Shell");
-  		if (wscript!=null) {
-   			wscript.SendKeys("{F11}");
-  		}
+(function() {
+	function createNew(event){	
+		window.localStorage.setItem('note_contents', " ");
+		setHtmlCode( window.localStorage.getItem('note-contents'));
 	}
-}
 
-$('#fullscreen').click(function () {
-	if (document.fullscreenEnabled) {
-        fullScreen();
-    };
-});
-*/
-$('#fullScreen').click(function() {
-	if (screenfull.enabled) {
-		screenfull.request();
+	function fullscreen() {
+		if (screenfull.enabled) {
+			screenfull.request();
+		}	
 	}
+	function saveLocalStorage(contents) {
+		var content = contents.code();
+		var oMyBlob = new Blob([content], { type : "text/plain", endings: "transparent"});
+		window.saveAs(oMyBlob, "note-test.html");
+	}
+
+	$('#createNew').on('click', createNew);
+	$('#fullScreen').on('click', fullScreen);
+	$('#saveFile').on('click', saveLoacalStorage);
 })
-$('#createNew').click(function() {
-	createNew();
-});
-
-$('#saveFile').click(function() {
-	saveLocalStorage($('#contents'));
-});
