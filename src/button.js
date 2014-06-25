@@ -30,7 +30,7 @@ $('#fullscreen').click(function () {
 });
 */
 $('#fullScreen').click(function() {
-	fullscreen();
+	fullScreen();
 })
 
 $('#createNew').click(function() {
