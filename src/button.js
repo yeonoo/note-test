@@ -4,8 +4,9 @@ bb.append(content);
 var fileSaver = window.saveAs(bb.getBlob("text/plain;charset=UTF-8"), "filename.txt");
 */
 $('#fullscreen').click(function () {
-	screenfull.toggle($('#container')[0]);
+	$(document).toggleFullScreen();
 });
+
 
 $('#createNew').click(function() {
 	createNew()
