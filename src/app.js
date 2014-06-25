@@ -24,7 +24,7 @@ function createNew(event){
 	setHtmlCode( window.localStorage.getItem('note-contents'));
 }
 
-function fullScree() {
+function fullScreen() {
 	if (screenfull.enabled) {
 		screenfull.request();
 	}

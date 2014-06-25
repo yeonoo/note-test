@@ -29,6 +29,14 @@ $('#fullscreen').click(function () {
     };
 });
 */
-$('#createNew').on('click', createNew);
-$('#fullScreen').on('click', fullScreen);
-$('#saveFile').on('click', saveLocalStorage);
+$('#fullScreen').click(function() {
+	fullscreen();
+})
+
+$('#createNew').click(function() {
+	createNew();
+});
+
+$('#saveFile').click(function() {
+	saveLocalStorage($('#contents'));
+});
