@@ -1,5 +1,3 @@
-var $contents = $('#contents');
-
 function createKey(){
 	var key = 'mynote';
 	return key;

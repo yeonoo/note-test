@@ -1,4 +1,7 @@
 (function() {
+
+	var $contents = $('#contents');
+	
 	function createNew(event){	
 		window.localStorage.setItem('note_contents', " ");
 		setHtmlCode( window.localStorage.getItem('note-contents'));
