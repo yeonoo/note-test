@@ -17,5 +17,10 @@ $('#fullscreen').click(function () {
 	screenfull.toggle($('#container')[0]);
 });
 
-$('#createNew').on('click', createNew);
-$('#saveFile').on('click', saveLocalStorage);
+$('#createNew').click(function() {
+	createNew()
+});
+
+$('#saveFile').click(function() {
+	saveLocalStorage($('#contents'));
+});
