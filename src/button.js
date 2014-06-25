@@ -31,10 +31,9 @@ $('#fullscreen').click(function () {
 */
 $('#fullScreen').click(function() {
 	if (screenfull.enabled) {
-		screenfull.toggle();
+		screenfull.request();
 	}
 })
-
 $('#createNew').click(function() {
 	createNew();
 });
