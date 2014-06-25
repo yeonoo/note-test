@@ -31,7 +31,7 @@ $('#fullscreen').click(function () {
 */
 $(function() {
 	$(document).ready(function(){
-        $("#fullscreen").toggle(
+        $("#fullScreen").toggle(
             function(){
                 fullscreen();
             },
