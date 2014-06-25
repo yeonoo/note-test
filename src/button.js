@@ -3,7 +3,7 @@ var bb = new BlobBuilder();
 bb.append(content);
 var fileSaver = window.saveAs(bb.getBlob("text/plain;charset=UTF-8"), "filename.txt");
 */
-
+/*
 function fullScreen() {
 	var el = document.documentElement
    		, rfs = // for newer Webkit and Firefox
@@ -28,7 +28,7 @@ $('#fullscreen').click(function () {
         fullScreen();
     };
 });
-
+*/
 
 $('#createNew').click(function() {
 	createNew();
