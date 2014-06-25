@@ -4,7 +4,9 @@ bb.append(content);
 var fileSaver = window.saveAs(bb.getBlob("text/plain;charset=UTF-8"), "filename.txt");
 */
 $('#fullscreen').click(function () {
-	$(document).fullScreen(true);
+	if (document.fullscreenEnabled) {
+        requestFullscreen(document.documentElement);
+    };
 });
 
 
